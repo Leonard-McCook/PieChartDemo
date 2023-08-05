@@ -42,7 +42,8 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Chart(data) {Item in
-                    
+                    SectorMark(angle: .value("Label", item))
+                        .foregroundStyle(item.color)
                 }
             }
             .navigationTitle("Pie Chart")
